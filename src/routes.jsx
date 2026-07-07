@@ -12,6 +12,7 @@ import Insights from "@/pages/Insights";
 import Versions from "@/pages/Versions";
 import History from "@/pages/History";
 import Settings from "@/pages/Settings";
+import Interview from "@/pages/Interview";
 import { useAuth } from "@/context/AuthContext";
 
 function ProtectedShell() {
@@ -43,6 +44,7 @@ export const router = createBrowserRouter([
       { path: "versions", element: <Versions /> },
       { path: "history", element: <History /> },
       { path: "settings", element: <Settings /> },
+      { path: "interview", element: <Interview /> },
     ],
   },
   { path: "*", element: <Navigate to="/" replace /> },

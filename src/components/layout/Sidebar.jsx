@@ -7,6 +7,7 @@ import {
   History,
   Settings,
   LogOut,
+  MessageSquare,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/context/AuthContext";
@@ -18,6 +19,7 @@ const NAV = [
   { to: "/insights", icon: BarChart3, label: "Insights" },
   { to: "/versions", icon: Layers, label: "Versions" },
   { to: "/history", icon: History, label: "History" },
+  { to: "/interview", icon: MessageSquare, label: "Mock Interview" },
 ];
 
 const ROW_BASE =

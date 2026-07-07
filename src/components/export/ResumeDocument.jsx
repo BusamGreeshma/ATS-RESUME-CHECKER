@@ -181,8 +181,6 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   projHeader: {
-    flexDirection: "row",
-    alignItems: "baseline",
     marginBottom: 2,
   },
   projName: {
@@ -397,12 +395,14 @@ export function ResumeDocument({ user, version, title }) {
             <SectionHeader>Projects</SectionHeader>
             {p.projects.map((proj, i) => (
               <View key={i} style={styles.projItem} wrap={false}>
-                <View style={styles.projHeader}>
+                <Text style={styles.projHeader}>
                   <Text style={styles.projName}>{proj.name}</Text>
                   {proj.tech?.length ? (
-                    <Text style={styles.projTech}>{proj.tech.join(" · ")}</Text>
+                    <Text style={styles.projTech}>
+                      {"  "}{proj.tech.join(" · ")}
+                    </Text>
                   ) : null}
-                </View>
+                </Text>
                 {proj.description ? (
                   <Text style={styles.projDesc}>{proj.description}</Text>
                 ) : null}
