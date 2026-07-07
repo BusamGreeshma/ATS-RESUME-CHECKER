@@ -384,7 +384,7 @@ function NewInterviewForm({ resumes, isLoadingResumes, onStart, isStarting, erro
 }
 
 // 2. Chat component
-function ActiveInterviewChat({ session, onSubmitAnswer, isSubmitting, onFinishEarly, isFinishing, onViewReport }) {
+function ActiveInterviewChat({ session, onSubmitAnswer, isSubmitting, onFinishEarly, isFinishing, onViewReport, error }) {
   const [answer, setAnswer] = useState("");
   const scrollRef = useRef(null);
 
